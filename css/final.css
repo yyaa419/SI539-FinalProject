@@ -1,0 +1,335 @@
+/* @import 'https://fonts.googleapis.com/css?family=Lato:300,400,700'; */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+html, body {
+  background-color: #EBE3D5;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3{
+  font-family: 'Playfair Display', serif;
+}
+
+p{
+  font-size: 20px;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  font-family: 'Lato', sans-serif;
+  font-size: 20px;
+  color: #000;;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.skip {
+  position: absolute;
+  height: 25px;
+  background-color: burlywood;
+  top: -1000px;
+}
+
+.skip:focus {
+  left: 20px;
+  top: 100px;
+}
+
+.header-container{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  background-color: #FAF1E4;
+  padding: 20px;
+}
+
+.header-container::after{
+  content: "\1F517";
+}
+
+
+.nav-bar{
+  display: flex;
+  flex-direction: row;
+  align-items: center; 
+  justify-content: center; 
+  margin: 0;
+  padding: 0;
+}
+
+.nav-bar li{
+  padding: 0 15px;
+  text-decoration: none;
+}
+
+main {
+  display: block;
+  padding-top: 130px;
+  align-items: center;
+  justify-items: center;
+  background: #EBE3D5;
+  color: #776B5D;
+  font-size: 14px;
+  font-family: Lato, sans-serif;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+
+.self-intro{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding-right: 50px;
+  padding-left: 70px;
+}
+
+.self-intro .image img{
+  justify-content: center;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+  border:5px solid #B0A695;
+  border-radius: 20%;
+
+  &:hover {
+    cursor: pointer; 
+    animation:bounceOut .4s linear;
+  }
+}
+
+@keyframes bounceOut {
+  0%{ box-shadow: 0 0 0 4px #B0A695; opacity:1;}
+  25%{ box-shadow: 0 0 0 1px #B0A695; opacity:1;}
+  50%{ box-shadow: 0 0 0 7px #B0A695; opacity:1; }
+  75%{ box-shadow: 0 0 0 4px #B0A695; opacity:1;}
+  100%{ box-shadow: 0 0 0 5px #B0A695; opacity:1;}
+}
+
+
+.self-intro .text{
+  padding: 70px;
+}
+
+.self-intro .text h2::after{
+  content: "\1F431"
+}
+
+.introduction{
+  display: flex;
+  flex-direction: column;
+  padding-left: 70px;
+  padding-right: 50px;
+}
+
+.introduction .text{
+  padding-left: 70px;
+  padding-right: 50px;
+}
+
+.overview-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+.museum-grid{
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 10px;
+}
+
+#museum1{
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+#museum2{
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+#museum3{
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+#museum4{
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+#museum5{
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+#museum6{
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.museum{
+  display: flex;
+  flex-direction: column;
+}
+
+.museum-image{
+  display: grid;
+  border-radius: 1rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.museum-image > * {
+  grid-area: 1/1;
+  transition: .4s;
+}
+.museum-image figcaption{
+  display: grid;
+  align-items: end;
+  font-family: sans-serif;
+  font-size: 2.3rem;
+  font-weight: bold;
+  color: #0000;
+  padding: .75rem;
+  background: var(--c,#0009);
+  clip-path: inset(0 var(--_i,100%) 0 0);
+  -webkit-mask:
+    linear-gradient(#000 0 0),
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  -webkit-mask-clip: text, padding-box;
+  margin: -1px;
+}
+
+.museum-image:hover figcaption{
+  --_i: 0%;
+}
+
+.museum-image:hover img {
+  transform: scale(1.2);
+}
+
+@supports not (-webkit-mask-clip: text) {
+  .museum-image figcaption {
+   -webkit-mask: none;
+   color: #fff;
+  }
+}
+
+.museum-text{
+  display: block;
+}
+
+.museum-text p{
+  color: #3F2305;
+}
+
+
+
+/* css style sheet for gallery page */
+.app {
+  height: 90vmin;
+  width: 90vmin;
+  background: B0A695;
+  /* position: relative; */
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-top: auto; */
+  /* justify-content: center; */
+
+  /* Hide the app on load */
+  /* visibility: hidden; */
+}
+
+.gallery-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.gallery-intro{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2% 3.6%;
+  padding: 10px;
+}
+
+.item {
+  cursor: pointer;
+  font-size: 0;
+}
+
+.detail {
+  margin-top: 125px;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  width: 90.1vmin;
+  height: 70vmin;
+  cursor: pointer;
+  font-size: 0;
+  display: flex;
+  flex-direction: column;
+  /* visibility: hidden; */
+  max-height: 100%;
+  overflow: auto;
+}
+
+.detail > img {
+  position: relative;
+  z-index: 1;
+}
+
+.detail .content {
+  background: #232323;
+  padding: 2rem 1.5rem;
+  font-size: 1rem;
+  box-sizing: border-box;
+  flex-grow: 1;
+}
+
+.detail .content > * {
+  margin-bottom: 1rem;
+}
+
+.detail .title {
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.detail .secondary {
+  color: lightgray;
+}
+
+.detail .description {
+  line-height: 1.5;
+}
