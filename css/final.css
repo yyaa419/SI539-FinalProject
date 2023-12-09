@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
 
 html, body {
-  background-color: #EBE3D5;
+  background-color: #F2ECBE;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -29,10 +29,6 @@ a{
   text-decoration: none;
 }
 
-img {
-  width: 100%;
-}
-
 .skip {
   position: absolute;
   height: 25px;
@@ -45,26 +41,26 @@ img {
   top: 100px;
 }
 
-.header-container{
-  position: fixed;
+/* css style sheet for the nav bar */
+header{
+  position: sticky;
   top: 0;
-  left: 0;
-  z-index: 1;
+  z-index: 3;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
-  width: 100%;
-  background-color: #FAF1E4;
+  background-color: #9A3B3B;
   padding: 20px;
+  /* opacity: 0.9; */
+  box-shadow: #00000029 0px 2px 4px 0px;
 }
 
-.header-container::after{
-  content: "\1F517";
+header a{
+  color: #F3EEEA;
 }
 
-
-.nav-bar{
+header .nav-bar{
   display: flex;
   flex-direction: row;
   align-items: center; 
@@ -73,17 +69,51 @@ img {
   padding: 0;
 }
 
-.nav-bar li{
+header .nav-bar li{
   padding: 0 15px;
   text-decoration: none;
 }
 
+header .nav-bar li a:hover{
+  color: #cfcdcd;
+  transition: 0.5s;
+}
+
+header .nav-bar li a.active{
+  color: #cfcdcd;
+  transition: 0.5s;
+}
+
+header .mail{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  background-color: #f0e4e7;
+  padding: 20px;
+  border-radius: 30px;
+  box-shadow: #00000029 0px 2px 4px 0px;
+}
+
+header .mail a{
+  padding-right: 15px;
+  color: #ca4c52;
+}
+
+header .mail:hover{
+  background-color: #ca4c52;
+  transition: 0.5s;
+}
+
+header .mail:hover a{
+  padding-right:15px;
+  color: #F3EEEA;
+}
+
+/* css style for the general main page setting */
 main {
   display: block;
-  padding-top: 130px;
   align-items: center;
   justify-items: center;
-  background: #EBE3D5;
   color: #776B5D;
   font-size: 14px;
   font-family: Lato, sans-serif;
@@ -91,6 +121,99 @@ main {
   margin-right: 5%;
 }
 
+/* css style sheet for home page */
+
+/* Next & previous buttons */
+
+.slideshow-container {
+  position: relative;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: #00000029 0px 2px 4px 0px;
+}
+
+/* .slideshow-container img:hover{
+  opacity: 0.3;
+  transition: 0.5s;
+} */
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot-active, .dot:hover {
+  background-color: #717171;
+}
+
+.images-nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.images-nav li{
+  padding: 0 15px;
+  text-decoration: none;
+}
+
+
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 
 .self-intro{
   display: flex;
@@ -124,11 +247,11 @@ main {
 }
 
 
-.self-intro .text{
+.self-intro .self-text{
   padding: 70px;
 }
 
-.self-intro .text h2::after{
+.self-intro .self-text h2::after{
   content: "\1F431"
 }
 
@@ -139,7 +262,7 @@ main {
   padding-right: 50px;
 }
 
-.introduction .text{
+.introduction .introduction-text{
   padding-left: 70px;
   padding-right: 50px;
 }
@@ -202,6 +325,7 @@ main {
   grid-area: 1/1;
   transition: .4s;
 }
+
 .museum-image figcaption{
   display: grid;
   align-items: end;
@@ -230,7 +354,6 @@ main {
 
 @supports not (-webkit-mask-clip: text) {
   .museum-image figcaption {
-   -webkit-mask: none;
    color: #fff;
   }
 }
@@ -247,9 +370,9 @@ main {
 
 /* css style sheet for gallery page */
 .app {
-  height: 90vmin;
-  width: 90vmin;
-  background: B0A695;
+  height: 150vmin;
+  width: 150vmin;
+  background: #EBE3D5;
   /* position: relative; */
   overflow: auto;
   margin-left: auto;
@@ -283,6 +406,10 @@ main {
   padding: 10px;
 }
 
+.gallery img{
+  width: 100%;
+}
+
 .item {
   cursor: pointer;
   font-size: 0;
@@ -291,15 +418,15 @@ main {
 .detail {
   margin-top: 125px;
   position: fixed;
-  top: 10px;
+  /* top: 10px; */
   left: 50%;
-  width: 90.1vmin;
-  height: 70vmin;
+  width: 90vmin;
+  height: 80vmin;
   cursor: pointer;
   font-size: 0;
   display: flex;
   flex-direction: column;
-  /* visibility: hidden; */
+  visibility: hidden;
   max-height: 100%;
   overflow: auto;
 }

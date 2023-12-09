@@ -8,24 +8,75 @@
 </head>
 
 <body>
-    <header class="header-container">
+    <header>
         <ul class="nav-bar">
-            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="index.html">Home</a></li>
             <li><a href="overview.html">Overview</a></li>
             <li><a href="gallery.html">Gallery</a></li>
         </ul>
 
-        <h1 class="title">My Story with Museum</h1>
-
-        <a href="https://www.instagram.com/akix_408">Follow My Ins to Get More Information</a>
+        <div class="mail" onmouseover="changeImage()" onmouseout="restoreImage()">
+            <a href=mailto:"yyaa@umich.edu">Contact Me</a>
+            <img src="images/icon/send.png" alt="instagram" class="send-icon" width="30px">
+        </div>
     </header>
+
+    <!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <img src="images/timecontainer/paris.png" style="width:100%">
+    </div>
+  
+    <div class="mySlides fade">
+      <img src="images/timecontainer/poland.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="images/timecontainer/netherland.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="images/timecontainer/stockholm.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="images/timecontainer/barcelona.png" style="width:100%">
+    </div>
+
+  
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+
+  <!-- the image navigation bar -->
+  <div class="Navigation Bar for Image Gallery">
+    <ul class="images-nav">
+        <li>Paris</li>
+        <li>Poland</li>
+        <li>Stockholm</li>
+        <li>netherland</li>
+    </ul>
+  </div>
 
     <main id="main">
             <div class="self-intro">
                 <div class="image">
                     <img src="images/selfie.jpg" alt="a photo of myself" width="400">
                 </div>
-                <div class="text">
+                <div class="self-text">
                     <h2>My name is Kate</h2>
                     <p>I am a first-year graduate student from information school and follow the UX track.
                         I am interested in UX design and web development. I am currently learning JavaScript and some
@@ -40,7 +91,7 @@
             </div>
 
             <div class="introduction">
-                <div class="text">
+                <div class="introduction-text">
                     <p>
                         This year I travelled to bunches of countries in Europe and visited many museums and significant buildings. 
                         I want to record my experience and share with you!
@@ -49,9 +100,9 @@
             </div>
 
 
-
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+    <script src="header.js"></script>
+    <script src="swiper.js"></script>
     </main>
 
 </body>

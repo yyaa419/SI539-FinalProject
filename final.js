@@ -44,6 +44,7 @@ function showDetails(item) {
   // Change image and text
   const data = item.dataset;
   detailImage.addEventListener("load", onLoad);
+
   detailImage.src = item.querySelector('img').src;
   detailTitle.innerText = data.title;
   detailSecondary.innerText = data.secondary;
@@ -70,7 +71,7 @@ function hideDetails() {
   tl.set(details, {overflow: "hidden"})
     .to(detailContent, {yPercent: -100})
     .to(items, {opacity: 1, stagger: {amount: 0.7, from: items.indexOf(activeItem), grid: "auto"}})
-    .to(".app", {backgroundColor: "#fff"}, "<");
+    .to(".app", {backgroundColor: "#EBE3D5"}, "<");
 
   // animate from the original state to the current one.
   Flip.from(state, {
