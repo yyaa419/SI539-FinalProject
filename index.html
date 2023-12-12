@@ -3,8 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>JavaScript Video Controls</title>
+    <title>Travel Blog</title>
     <link rel="stylesheet" type="text/css" href="css/final.css">
+    <link rel="icon" href="images/icon/travel.png" type="image/x-icon">
 </head>
 
 <body>
@@ -21,88 +22,99 @@
         </div>
     </header>
 
-    <!-- Slideshow container -->
-<div class="slideshow-container">
+   
+    <main id="main">
 
-    <!-- Full-width images with number and caption text -->
-    <div class="mySlides fade">
-      <img src="images/timecontainer/paris.png" style="width:100%">
-    </div>
-  
-    <div class="mySlides fade">
-      <img src="images/timecontainer/poland.png" style="width:100%">
-    </div>
+        <div class="image-background">
+            <img src="images/background/background6.jpg" alt="overview" width="100%">
+        </div>
 
-    <div class="mySlides fade">
-        <img src="images/timecontainer/netherland.png" style="width:100%">
-    </div>
+        <div class="self-intro">
+            <div class="image">
+                <img src="images/selfie.jpg" alt="a photo of myself" width="400">
+            </div>
+            <div class="self-text">
+                <h1>Hi My name is Kate</h1>
+                <p>I am a first-year graduate student from information school and follow the UX track.
+                    I am interested in UX design and web development. I am currently learning JavaScript and some
+                    other
+                    front-framework structure like react and vue.
+                </p>
+                <p>
+                    My favourite animal is American Shorthair and I own a three-years-old one named "xiaomi" in
+                    Shanghai. She's so cute and I miss her so much!!! (The photo is shown in the left side)
+                </p>
+            </div>
+        </div>
 
-    <div class="mySlides fade">
-        <img src="images/timecontainer/stockholm.png" style="width:100%">
-    </div>
+         <!-- Slideshow container -->
+    <div class="slideshow-container">
+        <h2>My Travel Story in Europe</h2>
+        <p>The photo gallery demonstrates the European countreis I have travelled
+            during my exchange period. The figures containing magnificant landmarks
+            and exciting city views I put in the slider are the one I
+            think can perfectly represent my impression towards that
+            certain country. 
+        </p>
+        <p>I would like to share my travelling stories with you guys!</p>
 
-    <div class="mySlides fade">
-        <img src="images/timecontainer/barcelona.png" style="width:100%">
-    </div>
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <img src="images/timecontainer/paris.png" style="width:100%">
+        </div>
 
-  
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <br>
-  
-  <!-- The dots/circles -->
-  <div style="text-align:center">
+        <div class="mySlides fade">
+            <img src="images/timecontainer/poland.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/timecontainer/netherland.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/timecontainer/stockholm.png" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="images/timecontainer/barcelona.png" style="width:100%">
+        </div>
+
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <!-- <div style="text-align:center">
     <span class="dot" onclick="currentSlide(1)"></span>
     <span class="dot" onclick="currentSlide(2)"></span>
     <span class="dot" onclick="currentSlide(3)"></span>
     <span class="dot" onclick="currentSlide(4)"></span>
     <span class="dot" onclick="currentSlide(5)"></span>
-  </div>
+  </div> -->
 
-  <!-- the image navigation bar -->
-  <div class="Navigation Bar for Image Gallery">
-    <ul class="images-nav">
-        <li>Paris</li>
-        <li>Poland</li>
-        <li>Stockholm</li>
-        <li>netherland</li>
-    </ul>
-  </div>
+    <!-- the image navigation bar -->
+    <div class="images-nav-container">
 
-    <main id="main">
-            <div class="self-intro">
-                <div class="image">
-                    <img src="images/selfie.jpg" alt="a photo of myself" width="400">
-                </div>
-                <div class="self-text">
-                    <h2>My name is Kate</h2>
-                    <p>I am a first-year graduate student from information school and follow the UX track.
-                        I am interested in UX design and web development. I am currently learning JavaScript and some
-                        other
-                        front-framework structure like react and vue.
-                    </p>
-                    <p>
-                        My favourite animal is American Shorthair and I own a three-years-old one named "xiaomi" in
-                        Shanghai. She's so cute and I miss her so much!!! (The photo is shown in the left side)
-                    </p>
-                </div>
-            </div>
-
-            <div class="introduction">
-                <div class="introduction-text">
-                    <p>
-                        This year I travelled to bunches of countries in Europe and visited many museums and significant buildings. 
-                        I want to record my experience and share with you!
-                    </p>
-                </div>
-            </div>
+        <ul class="images-nav">
+            <li class="image-tag" onclick="currentSlide(1)">France</li>
+            <li class="image-tag" onclick="currentSlide(2)">Poland</li>
+            <li class="image-tag" onclick="currentSlide(3)">Netherland</li>
+            <li class="image-tag" onclick="currentSlide(4)">Sweden</li>
+            <li class="image-tag" onclick="currentSlide(5)">Spain</li>
+        </ul>
+    </div>
 
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
-    <script src="header.js"></script>
-    <script src="swiper.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+        <script src="header.js"></script>
+        <script src="swiper.js"></script>
     </main>
 
 </body>
+
+<footer>
+    Yan 2023
+</footer>

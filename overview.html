@@ -3,8 +3,10 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>JavaScript Video Controls</title>
+    <title>Travel Blog</title>
     <link rel="stylesheet" type="text/css" href="css/final.css">
+    <link rel="icon" href="images/icon/travel.png" type="image/x-icon">
+
 </head>
 
 <body>
@@ -22,108 +24,119 @@
 
     </header>
 
-    <main id="main">
+    <main id="overview">
+        <div class="image-background">
+            <img src="images/background/background6.jpg" alt="overview" width="100%">
+        </div>
+
+        <div class="timeline">
+            <div class="outer">
+
+              <div class="card-outer">
+              <div class="card-outer2" onclick="clickFlipCard(this)">
+              <div class="card">
+                <div class="cover">
+                    <img src="images/overview/french.png" alt="french" width="300px">
+                </div>
+                <div class="info">
+                  <h2 class="title">23 Feb. French, Paris</h2>
+                  <p>My first stop is French.  Walking along the Seine river, I feel incredibly relaxed and 
+                    free. I stopped for a rest with my friends at a cute-decorated dessert restaurant. 
+                    Chocolate brownie tastes perfect with lucious bananas.
+                   </p>
+                </div>
+              </div>
+              </div>
+              </div>
+
+              <div class="card-outer">
+              <div class="card-outer2" onclick="clickFlipCard(this)">
+              <div class="card">
+                <div class="cover">
+                    <img src="images/overview/poland.png" alt="french" width="300px">
+                </div>
+                <div class="info">
+                  <h2 class="title">23 March. Poland, Warsaw</h2>
+                  <p>
+                    Warsaw is the sprawling capital of Poland. Its widely varied architecture reflects the city's 
+                    long, turbulent history. This picture was shot in a small park near the old town. Wind breezed 
+                    and water flowed. I felt like I was in a fairy tale.
+                  </p>
+                </div>
+              </div>
+              </div>
+              </div>
+
+
+              <div class="card-outer">
+              
+              <div class="card-outer2" onclick="clickFlipCard(this)">
+              <div class="card">
+                <div class="cover">
+                    <img src="images/overview/netherland.png" alt="french" width="300px">
+                </div>
+                <div class="info">
+                  <h2 class="title">23 April. Netherland Amsterdam</h2>
+                  <p> I was deeply impressed by its
+                      colorful street view and the beautiful canals of Amsterdam when stepping in this land. 
+                      
+                      Just like this portait, which is a piece of unique work I've found in a small restaurant.  
+                    </p>
+                </div>
+              </div>
+              </div>
+              </div>
+
+            
+              <div class="card-outer">
+              <div class="card-outer2" onclick="clickFlipCard(this)">
+              <div class="card">
+                <div class="cover">
+                    <img src="images/overview/sweden.png" alt="french" width="300px">
+                </div>
+                <div class="info">
+                  <h2 class="title">23 May. Stockholm Sweden</h2>
+                  <p>Stockholm is called the "Venice of the North". There's a beautiful church with oiled-green roof
+                    located in the city center. I took off this picture in a shiny day.</p>
+                </div>
+              </div>
+              </div>
+              </div>
+            
+
+              <div class="card-outer">
+              <div class="card-outer2" onclick="clickFlipCard(this)">
+              <div class="card" >
+                <div class="cover">
+                    <img src="images/overview/spain.png" alt="french" width="300px">
+                </div>
+                <div class="info">
+                  <h2 class="title">23 June. Barcelona Spain</h2>
+                  <p>You couldn't miss the iconic building: Sagrada Família, where Gaudí's visionary genius 
+                    comes to life in a symphony of sculpted stone. I visited the church in the afternoon where
+                    the sunset light broke through the glass and created a fabulous painting work on the ground.
+                </p>
+                </div>
+              </div>
+              </div>
+              </div>
+
+            </div>
+          </div>
 
         <div class="overview-title">
-            <h1>Brief Overview of my Museum Tour</h1>
+            <h1>My Travel Journel</h1>
         </div>
 
-        <div class="museum-grid">
-            <div class="museum" id="museum1">
-
-                <div class="museum-image">
-                    <img src="images/louvre-museum-paris-large.avif" alt="Louvre Museu" width="300px">
-                    <figcaption>France, Paris</figcaption>
-                </div>
-
-                <div class="museum-text">
-                    <p>
-                        The Louvre Museum is one of the world's largest and most visited art
-                        museums. Renowned for its vast and diverse collection, including iconic works like the Mona Lisa
-                        and the Venus de Milo, the Louvre showcases art and artifacts spanning from ancient
-                        civilizations to the 19th century.
-                    </p>
-                </div>
-            </div>
-
-            <div class="museum" id="museum2">
-                <div class="museum-image">
-                    <img src="images/orsay3.jpg" alt="Musée d'Orsay" width="300px">
-                    <figcaption>France, Paris</figcaption>
-                </div>
-                <div class="museum-text">
-                    <p>
-                        The Musée d'Orsay is renowned for its impressive collection of
-                        Western art from the period spanning 1848 to 1914. Housed in a former railway station, the
-                        museum showcases an extensive array of masterpieces, including works by iconic artists such as
-                        Monet, Van Gogh, and Degas.
-                    </p>
-                </div>
-            </div>
-
-            <div class="museum" id="museum3">
-                <div class="museum-image">
-                    <img src="images/berlin.jpg" alt="Jewish Museum" width="300px">
-                    <figcaption>Berlin, German</figcaption>
-                </div>
-                <div class="museum-text">
-                    <p>
-                        The Jewish Museum Berlin is a renowned cultural institution located in Berlin, Germany,
-                        dedicated to exploring Jewish history, culture, and identity. Designed by architect Daniel
-                        Libeskind, the museum's iconic architecture symbolizes the complex and interconnected narratives
-                        of Jewish life, providing a thought-provoking and immersive experience for visitors.
-                    </p>
-                </div>
-            </div>
-
-            <div class="museum" id="museum4">
-                <div class="museum-image">
-                    <img src="images/museu picasso.jpg" alt="Museu Picasso" width="300px">
-                    <figcaption>Barcelona, Spain</figcaption>
-                </div>
-                <div class="museum-text">
-                    <p>
-                        The Museu Picasso, located in Barcelona, Spain, is a renowned art museum dedicated to the life
-                        and works of the legendary Spanish artist Pablo Picasso. Home to one of the most extensive
-                        collections of Picasso's artworks, the museum provides a comprehensive journey through the
-                        various stages of his prolific career, showcasing paintings, sculptures, drawings, and ceramics
-                        that highlight his significant contributions to modern art.
-                    </p>
-                </div>
-            </div>
-
-            <div class="museum" id="museum5">
-                <div class="museum-image">
-                    <img src="images/Viking.jpg" alt="Nordic Museum" width="300px">
-                    <figcaption>Stockholm, Sweden</figcaption>
-                </div>
-                <div class="museum-text">
-                    <p>
-                        The Nordic Museum, situated in Stockholm, Sweden, stands as a cultural institution dedicated to
-                        the preservation and celebration of Nordic history and heritage. Housed in a captivating
-                        19th-century building on Djurgården island, the museum offers a comprehensive exploration of the
-                        region's traditions, customs, and artifacts, making it a must-visit destination for those
-                        seeking a deeper understanding of Scandinavia's rich cultural tapestry.</p>
-                </div>
-            </div>
-
-            <div class="museum" id="museum6">
-                <div class="museum-image">
-                    <img src="images/British mesuem.jpg" alt="British Museum" width="300px">
-                    <figcaption>London, British</figcaption>
-                </div>
-                <div class="museum-text">
-                    <p>
-                        The British Museum is a public institution dedicated to human history, art and culture. Its 
-                        permanent collection of some eight million works is among the largest and most comprehensive 
-                        in existence, having been widely sourced during the era of the British Empire. It documents 
-                        the story of human culture from its beginnings to the present. It was the first public national 
-                        museum in the world.
-                    </p>
-                </div>
-            </div>
         </div>
-    <script src="header.js"></script>
+
+
+        <script src="flipcard.js"></script>
+        <script src="header.js"></script>
     </main>
 
 </body>
+
+<footer>
+    Yan 2023
+</footer>

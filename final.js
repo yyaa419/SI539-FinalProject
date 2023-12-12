@@ -71,7 +71,7 @@ function hideDetails() {
   tl.set(details, {overflow: "hidden"})
     .to(detailContent, {yPercent: -100})
     .to(items, {opacity: 1, stagger: {amount: 0.7, from: items.indexOf(activeItem), grid: "auto"}})
-    .to(".app", {backgroundColor: "#EBE3D5"}, "<");
+    .to(".app", {backgroundColor: "#FFF"}, "<");
 
   // animate from the original state to the current one.
   Flip.from(state, {
